@@ -1,0 +1,27 @@
+<div class="row">
+    {{#each DataDonaciones}}
+        <div class="col-md-3">
+            <div class="card">
+                <card class="card-body">
+                    <h4 class="card-title d-flex justify-content-betwee align-items-center">
+                        {{title}} <a href="/donacion/editar/{{_id}}"><i class="fas fa-edit"></i></a>
+                    </h4>
+                    <p>{{descripcion}}</p>
+                    <form action="/donaciones/eliminar/{{_id}}?_method=DELETE" method="POST">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <button class="btn btn-danger btn-block btn-sm" type="submit">
+                            Eliminar
+                        </button>
+                    </form>
+                </card>
+            </div>
+        </div>
+    {{else}}
+    <div class="card mx-auto">
+        <div class="card-body">
+            <p class="lead">No tienes donaciones aun</p>
+            <a href="/donacion/crear" class="btn btn-success btn-block">Dona algo!</a>
+        </div>
+    </div>
+    {{/each}}
+</div>
