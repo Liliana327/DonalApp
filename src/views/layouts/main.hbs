@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DonalApp</title>
 
+    <link href="/styles/common.css" rel="stylesheet">
+    <link href="/styles/landing.css" rel="stylesheet">
+    <link href="/styles/header.css" rel="stylesheet">
+    <link href="/styles/footer.css" rel="stylesheet">
+    <link href="/styles/forms.css" rel="stylesheet">
+    <link href="/styles/filter.css" rel="stylesheet">
+    <link href="/styles/grid.css" rel="stylesheet">
+    <link href="/styles/club_profile.css" rel="stylesheet">
+    <link href="/styles/user_profile.css" rel="stylesheet">
+    <link href="/styles/add.css" rel="stylesheet">
+    <link href="/styles/event.css" rel="stylesheet">
+    <link href="/styles/ticket.css" rel="stylesheet">
+    <link href="/images/icon.png" rel="icon">
+
     <!-- BOOTSTRAP 4 -->
     <link rel="stylesheet" href="https://bootswatch.com/4/minty/bootstrap.min.css">
 
@@ -22,10 +36,13 @@
 
 </head>
 <body>
-    <p>Navegacion</p>
 
-    <main class="container">
-        {{> mensaje}}
+    {{> navegacion}}
+
+    <main class="container p-4">
+        {{> mensaje }}
+        {{> errores }}
+
         {{{ body }}}
     </main>
 

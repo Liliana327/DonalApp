@@ -2,12 +2,13 @@ const express = require('express');
 const router = express.Router();
 
 const Donaciones = require('../models/Donaciones');
+const { isAuthenticated } = require('../helpers/auth');
 
-router.get('/donacion/crear', (req, res) => {
+router.get('/donacion/crear', isAuthenticated, (req, res) => {
     res.render('Donaciones/nueva-donacion')
 });
 
-router.post('/donacion/crear', async (req, res) => {
+router.post('/donacion/crear', isAuthenticated, async (req, res) => {
     const { title, descripcion } = req.body;
     const errors = [];
     if(!title) {
@@ -24,18 +25,19 @@ router.post('/donacion/crear', async (req, res) => {
         });
     } else {
         const newDanaciones = new Donaciones({ title, descripcion});
+        newDanaciones.user = req.user.id;
         await newDanaciones.save();
         req.flash('success_msg', 'Tu donacion ha sido publicada.')
         res.redirect('/donaciones');
     }    
 });
 
-router.get('/donaciones', async (req, res) =>{
-    const DataDonaciones = await Donaciones.find().sort({fecha: 'desc'});
+router.get('/donaciones', isAuthenticated, async (req, res) =>{
+    const DataDonaciones = await Donaciones.find({user: req.user.id}).sort({fecha: 'desc'});
     res.render('Donaciones/todas-las-donaciones', { DataDonaciones })
 });
 
-router.get('/donacion/editar/:id', async (req, res) =>{
+router.get('/donacion/editar/:id', isAuthenticated, async (req, res) =>{
     const Donar = await Donaciones.findById(req.params.id)
     res.render('Donaciones/edit-donacion', {Donar});
 });
@@ -47,7 +49,7 @@ router.put('/donacion/editar/:id', async (req, res) => {
     res.redirect('/donaciones');
 });
 
-router.delete('/donaciones/eliminar/:id', async (req, res) =>{
+router.delete('/donaciones/eliminar/:id', isAuthenticated, async (req, res) =>{
     await Donaciones.findByIdAndDelete(req.params.id);
     req.flash('success_msg', 'Tu donacion ha sido eliminada.')
     res.redirect('/donaciones');

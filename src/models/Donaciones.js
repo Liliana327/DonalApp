@@ -5,7 +5,8 @@ const DonacionSchema = new Schema({
     title: { type: String, required: true},
     descripcion: { type: String, required: true},
     imagePath: { type: String},
-    fecha: { type: Date, default: Date.now}
+    fecha: { type: Date, default: Date.now},
+    user: { type: String, }
 });
 
 module.exports = mongoose.model('Donaciones', DonacionSchema);

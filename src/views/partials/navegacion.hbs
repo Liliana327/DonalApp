@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="/">
+            <img src="/img/Logo2.png" class="ml-auto" width="40" height="40" alt="40">
+            
+        </a>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                
+                <ul class="navbar-nav ml-auto">
+                     {{#if user}}
+                        <li class="nav-item dropdown">
+                            <a class="navbar-brand" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Donaciones
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="/donaciones">Todas las donaciones</a>
+                                <a class="dropdown-item" href="/donacion/crear">Agregar donacion</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="/users/logout">Logout</a>
+                            </div>
+                        </li>
+                      {{else}}
+                          <li class="nav-item active">
+                              <a class="nav-link" href="/users/signin">Ingresar</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="/users/signup">Crear cuenta</a>
+                          </li>
+                      {{/if}}
+                </ul>
+            </div>
+    </div>
+</nav>
