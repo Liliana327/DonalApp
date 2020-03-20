@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb+srv://ospina:yerlinson31@cluster0-bhm1s.mongodb.net/test?retryWrites=true&w=majority', {
+mongoose.connect('mongodb://localhost/DonalApp-db-app', {
     useCreateIndex: true,
     useNewUrlParser: true,
     useFindAndModify: false,
