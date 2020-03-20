@@ -1,10 +1,16 @@
-body {
-    background: #C04848;
-    background: -webkit-linear-gradient(to right, #480048, #C04848);
-    background: linear-gradient(to right, #480048, #C04848);
+.container-custom {
+    padding: 35px;
 }
 
 .logo {
     width: 30%;
 
+}
+img{
+    width: 80;
+}
+
+.bg-primary {
+    background: #5D26C1; 
+    
 }

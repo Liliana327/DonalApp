@@ -1,33 +1,53 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light bg-primary">
     <div class="container">
-        <a class="navbar-brand" href="/">
-            <img src="/img/Logo2.png" class="ml-auto" width="40" height="40" alt="40">
-            
+        <a class="navbar-brand waves-effect" href="/">
+          <img src="/img/Logo2.png" class="ml-auto" width="40" height="40" alt="40">
         </a>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 
-                <ul class="navbar-nav ml-auto">
-                     {{#if user}}
-                        <li class="nav-item dropdown">
-                            <a class="navbar-brand" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Donaciones
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="/donaciones">Todas las donaciones</a>
-                                <a class="dropdown-item" href="/donacion/crear">Agregar donacion</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="/users/logout">Logout</a>
-                            </div>
-                        </li>
-                      {{else}}
-                          <li class="nav-item active">
-                              <a class="nav-link" href="/users/signin">Ingresar</a>
-                          </li>
-                          <li class="nav-item">
-                              <a class="nav-link" href="/users/signup">Crear cuenta</a>
-                          </li>
-                      {{/if}}
-                </ul>
-            </div>
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link waves-effect" href="/donaciones">Mis donaciones
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link waves-effect" href="/donacion/crear">Donar
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav nav-flex-icons">
+            {{!-- {{#if user}} --}}
+            <li class="nav-item dropdown">
+                <a class="navbar-brand" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    {{ user.name }}
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="/users/logout">Salir</a>
+                </div>
+            </li>
+            {{!-- {{else}} --}}
+            <li class="nav-item">
+              <a href="/users/signup" class="nav-link border border-light rounded waves-effect">
+                Crear cuenta
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="/users/signin" class="nav-link border border-light rounded waves-effect">
+                Ingresar<i class="fas fa-arrow-right"></i>
+              </a>
+            </li>
+          </ul>
+
+        </div>
     </div>
 </nav>

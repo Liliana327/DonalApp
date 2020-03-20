@@ -1,28 +1,58 @@
-<div class="row">
+<div class="container-custom">
+  <div class="row">
     {{#each DataDonaciones}}
-        <div class="col-md-3">
-            <div class="card">
-                <card class="card-body">
-                    <h4 class="card-title d-flex justify-content-betwee align-items-center">
-                        {{title}} <a href="/donacion/editar/{{_id}}"><i class="fas fa-edit"></i></a>
-                    </h4>
-                    <p>{{descripcion}}</p>
-                    <form action="/donaciones/eliminar/{{_id}}?_method=DELETE" method="POST">
-                        <input type="hidden" name="_method" value="DELETE">
-                        <button class="btn btn-danger btn-block btn-sm" type="submit">
-                            Eliminar
-                        </button>
-                    </form>
-                </card>
-            </div>
+    <div class="col-md-3">
+        <div class="card promoting-card">
+        <!-- Card content -->
+        <div class="card-body d-flex flex-row">
+          <!-- Avatar -->
+          <img src="https://pbs.twimg.com/profile_images/1218731172076969984/1Kuv5Zgt_400x400.jpg" class="rounded-circle mr-3" height="50px" width="50px" alt="avatar">
+          <!-- Content -->
+          <div>
+            <!-- Title -->
+            <h4 class="card-title font-weight-bold mb-2">{{title}}</h4>
+            <!-- Subtitle -->
+            <p class="card-text"><i class="far fa-clock pr-2"></i>
+              {{ fecha }}
+            </p>
+          </div>
         </div>
-    {{else}}
-    <div class="card mx-auto">
+        <!-- Card image -->
+        <div class="view overlay">
+          <img class="card-img-top rounded-0" src="https://i2.wp.com/capital-lawyer.com/wp-content/uploads/2019/04/placeholder-image.jpg" alt="Card image cap">
+            <a href="#!">
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+
+        <!-- Card content -->
         <div class="card-body">
-            <h1> Hola {{user.name}}, gracias por hacer la direfencia.</h1>
-            <p class="lead">Lo que no usas a otro le puede servir!</p>
-            <a href="/donacion/crear" class="btn btn-success btn-block">Dona algo!</a>
+          <div class="collapse-content">
+            <!-- Text -->
+            <p class="card-text collapse" id="collapseContent">{{descripcion}}</p>
+            <!-- Button -->
+            <a class="btn btn-flat red-text p-1 my-1 mr-0 mml-1 collapsed" data-toggle="collapse" href="#collapseContent" aria-expanded="false" aria-controls="collapseContent"></a>
+            <a href="/donacion/editar/{{_id}}"><i class="fas fa-edit text-muted float-right p-1 my-1" data-toggle="tooltip" data-placement="top" title="Share this post"></i></a>
+            <i class="fas fa-heart text-muted float-right p-1 my-1 mr-3" data-toggle="tooltip" data-placement="top" title="I like it"></i>
+          </div>
+
+        </div>
+          <form action="/donaciones/eliminar/{{_id}}?_method=DELETE" method="POST">
+            <input type="hidden" name="_method" value="DELETE">
+            <button class="btn btn-danger btn-block btn-sm" type="submit">
+                Eliminar
+            </button>
+          </form>
         </div>
     </div>
-    {{/each}}
+  {{else}}
+  <div class="card mx-auto">
+      <div class="card-body">
+          <h1> Hola {{user.name}}, gracias por hacer la direfencia.</h1>
+          <p class="lead">Lo que no usas a otro le puede servir!</p>
+          <a href="/donacion/crear" class="btn btn-success btn-block">Dona algo!</a>
+      </div>
+  </div>
+  {{/each}}
+</div>
 </div>
