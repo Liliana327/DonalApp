@@ -1,39 +1,203 @@
-<body>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
     <header>
         <section class="textos-header">
             <h1>DonalApp</h1>
             <h2>Tú puedes hacer de esté un mundo mejor</h2>
         </section>
-        <div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+        <div class="wave" style="height: 150px; overflow: hidden;">
+            <svg viewBox="0 0 500 150" preserveAspectRatio="none"
                 style="height: 100%; width: 100%;">
                 <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
-                    style="stroke: none; fill: #fff;"></path>
-            </svg></div>
-    </header>
-    <main>
+                    style="stroke: none; fill: #fff;">
+                </path>
+            </svg>
+        </div>
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+        <div class="btn-button">
+            {{!-- {{#if user}} 
+                --}}
+                {{!-- <li class="nav-item dropdown"></li>
+                    <a class="navbar-brand" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {{ user.name }}
+                    </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="/users/logout">Salir</a>
+                </div>
+                </li>            
+                --}}
+            {{!-- {{else}} --}}
+            
+        <div class="btn-5">
+            <a href="/users/signup" class="btn btn-gradient-purple btn-lg btn-animated fade-effect waves-effect waves-light">
+                Crear cuenta
+            </a>
+            </div>
+            <div class="btn-6">
+                <a href="/users/signin" class="btn btn-gradient-purple btn-lg btn-animated fade-effect waves-effect waves-light">
+                    Ingresar
+                </a>
+            </div>
+        </div>
+        </header>
+
+        <!--- -->
+
+        <hr class="acerca de" id="acerca de">
+   
+        {{!-- <main>
+            <div class="container-body">
+                <section class="cd-section">
+                    <h2 class="titulo">Acerca de DonalApp</h2>
+                    <div class="contenedor-sobre-nosotros">
+                        <img src="img/grup.png" alt="" class="imagen-about-us">
+                        <div class="contenido-textos">
+                            <p>DonalApp es una aplicación que tiene como objetivo realizar una 
+                            comunicación con organizaciones benéficas dedicada a ayudar a los  
+                            necesitados y personas donantes con un buen corazón. 
+                            Nuestra meta es mejorar las vidas de los miembros desafortunados 
+                            que carecen de necesidades y contribuir al cuidado del medio ambiente.
+                            Contáctenos para saber qué puede hacer para contribuir al cambio.
+                            Cada día el  60% de elementos que presentan un buen estado, es arrojado 
+                            al basurero... <br>
+                            <br>
+                            <br>
+                            Un 10% de niños jóvenes y adultos presentan necesidades 
+                            tan básico como lo es el de vestir... 
+                            Esta idea nació al ver a estas personas necesitadas personas que rebuscan en los basureros estas objetos...
+                            Fue muy triste para mi ver como una niña saltaba de la alegría por que encontró un par de zapatos de su talla...
+                            Entonces por que en lugar de arrojar tus cosas que ya no usas o ya no te gustan a personas que le hace falta eso que ya no quieres?</p>
+                        </div>
+                    </div>
+                </section>
+
+                <hr class="cd-section por que donar?" id="por que donar?">
+
+                <section class="hr1">
+                    <h2 class="titulo">Por que donar?</h2>
+                    <div class="contenedor-sobre-nosotros">
+                        <img src="img/02.jpg" alt="" class="imagen-about-us">
+                            <div class="contenido-textos">
+                                <p>Cada día el  60% de elementos que presentan un buen estado, es arrojado al basurero...
+                                    Un 10% de niños jóvenes y adultos presentan necesidades tan básico como lo es el de vestir...
+                                    Esta idea nació al ver a estas personas necesitadas personas que rebuscan en los basureros estas objetos...
+                                    Fue muy triste para mi ver como una niña saltaba de la alegría por que encontró un par de zapatos de su talla...
+                                    Entonces por que en lugar de arrojar tus cosas que ya no usas o ya no te gustan a personas que le hace falta eso que ya no quieres?</p>
+                                <p>DonalApp es una aplicación que tiene como objetivo realizar una comunicación con organizaciones benéficas dedicada a ayudar a los necesitados y personas donantes con un buen corazón. Nuestra meta es mejorar las vidas de los miembros desafortunados que carecen de necesidades y contribuir al cuidado del medio ambiente.  Contáctenos para saber qué puede hacer para contribuir al cambio.</p>
+                            </div>   
+                    </div>       
+                </section>
+
+                <hr class="cd-section beneficiados" id="beneficiados">
+
+                <section class="cd-section">
+                    <h2 class="titulo">Beneficiados</h2>
+                    <div class="contenedor-sobre-nosotros">
+                        <img src="img/02.jpg" alt="" class="imagen-about-us">
+                            <div class="contenido-textos">
+                                <p>Cada día el  60% de elementos que presentan un buen estado, es arrojado al basurero...
+                                    Un 10% de niños jóvenes y adultos presentan necesidades tan básico como lo es el de vestir...
+                                    Esta idea nació al ver a estas personas necesitadas personas que rebuscan en los basureros estas objetos...
+                                    Fue muy triste para mi ver como una niña saltaba de la alegría por que encontró un par de zapatos de su talla...
+                                    Entonces por que en lugar de arrojar tus cosas que ya no usas o ya no te gustan a personas que le hace falta eso que ya no quieres?</p>
+                                <p>DonalApp es una aplicación que tiene como objetivo realizar una comunicación con organizaciones benéficas dedicada a ayudar a los necesitados y personas donantes con un buen corazón. Nuestra meta es mejorar las vidas de los miembros desafortunados que carecen de necesidades y contribuir al cuidado del medio ambiente.  Contáctenos para saber qué puede hacer para contribuir al cambio.</p>
+                            </div>   
+                    </div>       
+                </section>
+
+                <hr class="cd-section beneficiados" id="como ayudar?">
+
+                <section class="cd-section">
+                    <h2 class="titulo">¿Qué puedes donar?</h2>
+                    <div class="contenedor-sobre-nosotros">
+                        <img src="img/inicio.png" alt="" class="imagen-about-us">
+                        <div class="contenido-textos">
+                            <h3><span>1</span>Objetos en buen estado</h3>
+                            <p>Si le inspiran las causas que promueve DonalApp, apreciaríamos mucho su apoyo. Done alegría e infancia. Es fácil y tendrá un enorme impacto en la vida de muchas personas necesitadas.</p>
+                            <h3><span>2</span>Donar prendas</h3>
+                            <p>Puedes donar ropa, muchas personas presentan estas necesidades, lo que no te sirve le puede servir a otros.</p>
+                            <h3><span>3</span>Puedes donar todo lo que quieras!</h3>
+                            <p>Puedes donar todo lo que ves que no usas ni usarás en un futuro y que le pueda servir a otras personas. <br>
+                                Si no te gusta, si no te sirve, si no lo usas... <br>
+
+                                Puedes dárselo a quien le pueda servir y haz de este un mundo más feliz.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+    </main> --}}
+
+
+
+
+
+<main>
         <section class="contenedor sobre-nosotros">
-            <h2 class="titulo">¿Quiénes somos y qué hacemos?</h2>
+            <h2 class="titulo">Acerca de DonalApp</h2>
             <div class="contenedor-sobre-nosotros">
                 <img src="img/grup.png" alt="" class="imagen-about-us">
                 <div class="contenido-textos">
-                    <p>DonalApp es una aplicación que tiene como objetivo realizar una comunicación con organizaciones benéficas dedicada a ayudar a los necesitados y personas donantes con un buen corazón. Nuestra meta es mejorar las vidas de los miembros desafortunados que carecen de necesidades y contribuir al cuidado del medio ambiente.  Contáctenos para saber qué puede hacer para contribuir al cambio.</p>
-                    <p>Cada día el  60% de elementos que presentan un buen estado, es arrojado al basurero...
-
-Un 10% de niños jóvenes y adultos presentan necesidades tan básico como lo es el de vestir...
-
-Esta idea nació al ver a estas personas necesitadas personas que rebuscan en los basureros estas objetos...
-
-Fue muy triste para mi ver como una niña saltaba de la alegría por que encontró un par de zapatos de su talla...
-
-Entonces por que en lugar de arrojar tus cosas que ya no usas o ya no te gustan a personas que le hace falta eso que ya no quieres?</p>
+                    <p>DonalApp es una aplicación que tiene como objetivo realizar una 
+                            comunicación con organizaciones benéficas dedicada a ayudar a los  
+                            necesitados y personas donantes con un buen corazón. 
+                            Nuestra meta es mejorar las vidas de los miembros desafortunados 
+                            que carecen de necesidades y contribuir al cuidado del medio ambiente.
+                            Contáctenos para saber qué puede hacer para contribuir al cambio.
+                            Cada día el  60% de elementos que presentan un buen estado, es arrojado 
+                            al basurero... <br>
+                            <br>
+                            <br>
+                            Un 10% de niños jóvenes y adultos presentan necesidades 
+                            tan básico como lo es el de vestir... 
+                            Esta idea nació al ver a estas personas necesitadas personas que rebuscan en los basureros estas objetos...
+                            Fue muy triste para mi ver como una niña saltaba de la alegría por que encontró un par de zapatos de su talla...
+                            Entonces por que en lugar de arrojar tus cosas que ya no usas o ya no te gustan a personas que le hace falta eso que ya no quieres?</p>
                 </div>
             </div>
         </section>
-        <hr>
-        <section class="contenedor sobre-nosotros">
+
+<hr class="cd-section por que donar?" id="por que donar?">
+
+
+        <section class="about-services">
+            <div class="contenedor">
+                <h2 class="titulo">Por que donar?</h2>
+                <div class="servicio-cont">
+                    <div class="servicio-ind">
+                        <img src="img/support-a-community-center-8.jpg" alt="">
+                        <h3>Mejor infancia</h3>
+                        <p>Por que con cada ayuda logramos niños mas felices, logrando asi una infancia mejor.</p>
+                    </div>
+                    <div class="servicio-ind">
+                        <img src="img/familia-pobreza.jpg" alt="">
+                        <h3>Familias felices</h3>
+                        <p>Por que ayudamos a mas familias a vivir comodamente con aquello que tu ya no utilizas</p>
+                    </div>
+                    <div class="servicio-ind">
+                        <img src="img/v.jpg" alt="">
+                        <h3>Un mejor mundo</h3>
+                        <p>Por que con donar lo que ya no utilizaras ayudamos a disminuir la contaminacion en el medio ambiente </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+                <hr class="cd-section que donar" id="que donar?">
+
+
+
+                <section class="contenedor sobre-nosotros">
             <h2 class="titulo">¿Qué puedes donar?</h2>
             <div class="contenedor-sobre-nosotros">
-                <img src="img/inicio.png" alt="" class="imagen-about-us">
+                <img src="img/Inicio.png" alt="" class="imagen-about-us">
                 <div class="contenido-textos">
                     <h3><span>1</span>Objetos en buen estado</h3>
                     <p>Si le inspiran las causas que promueve DonalApp, apreciaríamos mucho su apoyo. Done alegría e infancia. Es fácil y tendrá un enorme impacto en la vida de muchas personas necesitadas.</p>
@@ -41,13 +205,103 @@ Entonces por que en lugar de arrojar tus cosas que ya no usas o ya no te gustan 
                     <p>Puedes donar ropa, muchas personas presentan estas necesidades, lo que no te sirve le puede servir a otros.</p>
                     <h3><span>3</span>Puedes donar todo lo que quieras!</h3>
                     <p>Puedes donar todo lo que ves que no usas ni usarás en un futuro y que le pueda servir a otras personas. <br>
-                        Si no te gusta, si no te sirve, si no lo usas... <br>
-
-                        Puedes dárselo a quien le pueda servir y haz de este un mundo más feliz.</p>
+                    Si no te gusta, si no te sirve, si no lo usas... <br>
+                    Puedes dárselo a quien le pueda servir y haz de este un mundo más feliz.</p>
                 </div>
             </div>
         </section>
+
+
+                <hr class="cd-section causas" id="causas">
+
+        <section class="portafolio">
+            <div class="contenedor">
+                <h2 class="titulo">Causas</h2>
+                <div class="galeria-port">
+                    <div class="imagen-port">
+                        <img src="img/02.jpg" alt="">
+                        <div class="hover-galeria">
+                            <img src="img/icono1.png" alt="">
+                            <p>Nuestras causas</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="img/01.jpg" alt="">
+                        <div class="hover-galeria">
+                            <img src="img/icono1.png" alt="">
+                            <p>Nuestras causas</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="img/3.jpg" alt="">
+                        <div class="hover-galeria">
+                            <img src="img/icono1.png" alt="">
+                            <p>Nuestras causas</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="img/54e33afc0fcc9_10925501_775998672490236_4705390640414926064_o.jpg" alt="">
+                        <div class="hover-galeria">
+                            <img src="img/icono1.png" alt="">
+                            <p>Nuestras causas</p>
+                        </div>
+                    </div>
+        </section>
+        <section class="clientes contenedor">
+            <h2 class="titulo">Informacion</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="img/Liliana1.jpg" alt="">
+                    <div class="contenido-texto-card">
+                        <h4>Liliana Ospina</h4>
+                        <p>En la busqueda de mi proyecto tenia claro que queria algo que ayudara tanto al medio ambiente como a personas necesitadas, es asi como surgio DonalApp. <br>
+                        Proyecto de Portafolio para la  <a href="https://www.holbertonschool.com/">Escuela Holberton</a></p>
+                                                             
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <article class="container--redes">
+  <!--incio de el primer icono-->
+    <div class="icon">
+      <a class="icon-primary" href="https://www.facebook.com/liliuospina">f</a>	
+
+      <div class="container-description">
+        <a class="icon-description" href="https://www.facebook.com/liliuospina">Sigueme en facebook</a>	
+      </div>
+    </div>
+  <!--incio segundo icono-->
+    <div class="icon">
+      <a class="icon-primary color-twitter" href="https://twitter.com/liliuospina">
+          t
+      </a>	
+
+      <div class="container-description ">
+        <a class="icon-description color-twitter" href="https://twitter.com/liliuospina">Sigueme en Twitter</a>	
+      </div>
+    </div>
+  <!--incio tercer icono-->
+    <div class="icon">
+      <a class="icon-primary color-linkedin" href="https://www.linkedin.com/in/liliana-ospina-a3886916a/">In</a>	
+
+      <div class="container-description">
+        <a class="icon-description color-linkedin" href="https://www.linkedin.com/in/liliana-ospina-a3886916a/">Sigueme en Linkedin</a>	
+      </div>
+    </div>
+
+    <div class="icon">
+      <a class="icon-primary color-github" href="https://github.com/Liliana327">G</a>	
+
+      <div class="container-description">
+        <a class="icon-description color-github" href="https://github.com/Liliana327">Sigueme en Github</a>	
+      </div>
+    </div>
+     
+</article>
+        
     </main>
+
     <footer>
         <div class="contenedor-footer">
             <div class="content-foo">
@@ -66,3 +320,6 @@ Entonces por que en lugar de arrojar tus cosas que ya no usas o ya no te gustan 
         <h2 class="titulo-final">&copy; DonalApp.com</h2>
     </footer>
 </body>
+
+
+</html>

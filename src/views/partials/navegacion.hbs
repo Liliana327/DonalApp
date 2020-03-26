@@ -1,8 +1,8 @@
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light bg-primary">
+<nav class="navbar navbar-expand-lg navbar-light bg-light bg-primary sticky-top">
     <div class="container">
         <a class="navbar-brand waves-effect" href="/">
-          <img src="/img/Logo2.png" class="ml-auto" width="40" height="40" alt="40">
+          <img src="/img/Logo2.png" class="ml-auto"  width="40" height="40" alt="40">
         </a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -24,30 +24,18 @@
             </li>
           </ul>
 
-          <ul class="navbar-nav nav-flex-icons">
-            {{!-- {{#if user}} --}}
-            <li class="nav-item dropdown">
-                <a class="navbar-brand" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    {{ user.name }}
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="/users/logout">Salir</a>
-                </div>
-            </li>
-            {{!-- {{else}} --}}
-            <li class="nav-item">
-              <a href="/users/signup" class="nav-link border border-light rounded waves-effect">
-                Crear cuenta
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="/users/signin" class="nav-link border border-light rounded waves-effect">
-                Ingresar<i class="fas fa-arrow-right"></i>
-              </a>
-            </li>
-          </ul>
 
+      <div class="main-content"></div>
+          <section class="cd-section home-screen" id="top">
+              <nav class="navegation-static">
+                  <ul class="navbar-nav nav-flex-icons">
+                      <li><a href="#acerca de">Acerca de</a></li>
+                      <li><a href="#por que donar?">Por que donar?</a></li>
+                      <li><a href="#causas">Causas</a></li>
+                      <li><a href="#que donar?">Que donar?</a></li>
+                  </ul>
+              </nav>
+          </section>
         </div>
     </div>
 </nav>
